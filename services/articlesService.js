@@ -2,7 +2,7 @@ const { default: axios } = require('axios');
 const { filterByAuthor, makeUrl } = require('../util');
 
 const NodeCache = require( "node-cache" );
-const myCache = new NodeCache();
+const articlesCache = new NodeCache();
 
 
 /**
@@ -16,11 +16,11 @@ const myCache = new NodeCache();
 const getArticles = async (keywords, amt, title, author) => {
   const url = makeUrl(keywords, amt, title);
 
-  let articles = myCache.get(url);
+  let articles = articlesCache.get(url);
   if (articles == undefined) {
     try {
       articles = await (await axios.get(url)).data.articles;
-      myCache.set(url, articles);
+      articlesCache.set(url, articles);
     } catch (err) {
       throw err;
     }

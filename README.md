@@ -1,8 +1,9 @@
 -- How to run --
 
-In the root directory of this project, run:
-1. npm install
-2. npm start
+In the root directory of this project, follow the following steps:
+1. Add .env file to root of project (Sent to Mike through email)
+2. run `npm install`
+3. run `npm start`
 (I'm currently using node v17.4.0. If you're having issues running it, try moving to that version).
 
 

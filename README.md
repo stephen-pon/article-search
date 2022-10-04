@@ -26,7 +26,7 @@ All combinations of params are accepted except for the following rules:
 
 Examples:
 - GET localhost:3000/articles?amt=6&keywords=midterms Biden
-- GET localhost:3000/articles?title=Biden&author=Joe Smith
+- GET localhost:3000/articles?title=Biden&author=Karissa Bell
 - GET localhost:3000/articles?amt=30
 
 
